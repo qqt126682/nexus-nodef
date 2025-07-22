@@ -139,8 +139,8 @@ function start_instances() {
 
         docker run -dit \
             --name "$CONTAINER_NAME" \
-            --memory=1.5g \
-            --cpus=1 \
+            --memory=3g \
+            --cpus=2 \
             -e NODE_ID="$NODE_ID" \
             -e MAX_THREADS=1 \
             -v "$LOG_DIR":/nexus-data \
