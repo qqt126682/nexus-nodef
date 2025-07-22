@@ -164,14 +164,14 @@ function add_one_instance() {
 
     docker run -dit \
         --name "$CONTAINER_NAME" \
-        --memory=2g \
-        --cpus=1 \
+        --memory=3g \
+        --cpus=2 \
         -e NODE_ID="$NODE_ID" \
         -e MAX_THREADS=1 \
         -v "$LOG_DIR":/nexus-data \
         "$IMAGE_NAME"
 
-    echo "✅ 新实例 $CONTAINER_NAME 启动成功（线程数: 1，内存限制: 2GB）"
+    echo "✅ 新实例 $CONTAINER_NAME 启动成功（线程数: 2，内存限制: 3GB）"
 }
 
 function restart_node() {
